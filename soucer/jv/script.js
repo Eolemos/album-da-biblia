@@ -1,6 +1,6 @@
 // Troque aqui pelo seu link real de checkout.
 // Exemplo: "https://pay.hotmart.com/SEU_PRODUTO?checkoutMode=10"
-const CHECKOUT_URL = "https://pay.cakto.com.br/4tu4ho9_937575";
+const CHECKOUT_URL = "https://pay.cakto.com.br/tqrcuii";
 
 const buyers = [
   "Marina", "Ana", "Júlia", "Antônia", "Adriana", "Juliana", "Fernanda", "Patrícia",
