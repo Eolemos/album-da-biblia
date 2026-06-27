@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Obrigado pela Compra — Álbum da Bíblia</title>
+
+  <meta
+    name="description"
+    content="Obrigado pela compra do Álbum da Bíblia. Confira seu e-mail para acessar o produto."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900;1000&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="soucer/css/style.css" />
+
+  <style>
+    /* ===============================
+       OBRIGADO — RESPONSIVO COMPLETO
+    ================================ */
+
+    .thanks-page {
+      padding: 28px 0 56px;
+    }
+
+    .thanks-page .container {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .thanks-box {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: clamp(22px, 4vw, 38px);
+      box-shadow: 0 18px 44px rgba(46, 28, 112, 0.12);
+      border: 2px solid rgba(126, 72, 255, 0.14);
+      text-align: center;
+      max-width: 920px;
+      margin: 0 auto 30px;
+    }
+
+    .thanks-box .pill {
+      margin-bottom: 14px;
+    }
+
+    .thanks-box h1 {
+      font-size: clamp(30px, 5vw, 58px);
+      line-height: 1.08;
+      margin: 0 0 18px;
+    }
+
+    .thanks-box h1 span {
+      display: block;
+      margin-top: 4px;
+    }
+
+    .thanks-box p {
+      font-size: clamp(16px, 2.4vw, 20px);
+      line-height: 1.45;
+      font-weight: 900;
+      color: #34256c;
+      max-width: 760px;
+      margin: 0 auto 14px;
+    }
+
+    .delivery-alert {
+      background: #fff3bf;
+      border: 2px solid rgba(255, 186, 0, 0.55);
+      border-radius: 22px;
+      padding: clamp(16px, 3vw, 22px);
+      margin-top: 22px;
+      color: #6b3d00;
+      font-weight: 1000;
+      font-size: clamp(15px, 2.2vw, 18px);
+      line-height: 1.45;
+    }
+
+    .upsell-head {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 24px;
+    }
+
+    .upsell-head h2 {
+      font-size: clamp(28px, 4.5vw, 48px);
+      line-height: 1.1;
+      margin: 0 0 12px;
+    }
+
+    .upsell-head p {
+      font-size: clamp(15px, 2.2vw, 18px);
+      line-height: 1.45;
+      font-weight: 900;
+      color: #34256c;
+      margin: 0 auto;
+    }
+
+    .upsell-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .upsell-card {
+      background: #ffffff;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(46, 28, 112, 0.12);
+      border: 2px solid rgba(126, 72, 255, 0.12);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: 0;
+    }
+
+    .upsell-card.featured {
+      border-color: rgba(255, 186, 0, 0.6);
+      box-shadow: 0 18px 40px rgba(255, 186, 0, 0.18);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 210px;
+      background: #f6f0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .upsell-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .offer-label {
+      display: inline-block;
+      width: fit-content;
+      background: #fff3bf;
+      color: #8a4b00;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 10px;
+    }
+
+    .offer-label.purple {
+      background: #efe7ff;
+      color: #6d28d9;
+    }
+
+    .offer-label.green {
+      background: #e5ffe9;
+      color: #127c35;
+    }
+
+    .offer-label.blue {
+      background: #e5f0ff;
+      color: #1d4ed8;
+    }
+
+    .upsell-card h3 {
+      font-size: clamp(20px, 2.2vw, 24px);
+      line-height: 1.12;
+      margin: 0 0 10px;
+    }
+
+    .upsell-card p {
+      font-size: 15px;
+      line-height: 1.4;
+      margin: 0 0 14px;
+      color: #4b3f72;
+      font-weight: 800;
+    }
+
+    .upsell-list {
+      margin: 0 0 18px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .upsell-list li {
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 900;
+      color: #34256c;
+      margin-bottom: 7px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .upsell-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: #7c3aed;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 6px;
+    }
+
+    .upsell-card .btn {
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+      padding: 14px 12px;
+      font-size: 13.5px;
+      line-height: 1.2;
+      white-space: normal;
+    }
+
+    .home-box {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .home-box a {
+      color: #5b3df5;
+      font-weight: 1000;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    @media (max-width: 1100px) {
+      .upsell-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .product-img {
+        height: 240px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .top-alert {
+        font-size: 12px;
+        line-height: 1.25;
+        padding: 10px 8px;
+        letter-spacing: 0.4px;
+      }
+
+      .thanks-page {
+        padding: 18px 0 42px;
+      }
+
+      .thanks-page .container {
+        width: min(100% - 18px, 1180px);
+      }
+
+      .thanks-box {
+        border-radius: 22px;
+        padding: 22px 14px;
+        margin-bottom: 26px;
+      }
+
+      .thanks-box h1 {
+        font-size: 30px;
+        line-height: 1.12;
+        letter-spacing: -0.5px;
+      }
+
+      .thanks-box p {
+        font-size: 15.5px;
+      }
+
+      .delivery-alert {
+        border-radius: 18px;
+        padding: 16px 12px;
+        font-size: 14.5px;
+      }
+
+      .upsell-head {
+        margin-bottom: 18px;
+      }
+
+      .upsell-head h2 {
+        font-size: 28px;
+        line-height: 1.12;
+      }
+
+      .upsell-head p {
+        font-size: 15px;
+      }
+
+      .upsell-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .upsell-card {
+        border-radius: 22px;
+      }
+
+      .product-img {
+        height: 230px;
+        padding: 10px;
+      }
+
+      .upsell-content {
+        padding: 16px;
+      }
+
+      .upsell-card h3 {
+        font-size: 22px;
+      }
+
+      .upsell-card p {
+        font-size: 14.5px;
+      }
+
+      .upsell-list li {
+        font-size: 13.8px;
+      }
+
+      .upsell-card .btn {
+        font-size: 13px;
+        padding: 14px 10px;
+      }
+
+      footer {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .thanks-box h1 {
+        font-size: 27px;
+      }
+
+      .upsell-head h2 {
+        font-size: 25px;
+      }
+
+      .product-img {
+        height: 205px;
+      }
+
+      .upsell-card .btn {
+        font-size: 12.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-alert">
+    COMPRA CONFIRMADA — VERIFIQUE SEU E-MAIL
+  </div>
+
+  <main>
+    <section class="section-light thanks-page">
+      <div class="container">
+        <div class="thanks-box">
+          <div class="pill">Compra aprovada</div>
+
+          <h1>
+            Obrigado pela sua compra!
+            <span>Seu produto está chegando.</span>
+          </h1>
+
+          <p>
+            O acesso ao seu produto será enviado para o e-mail usado na compra.
+          </p>
+
+          <div class="delivery-alert">
+            Verifique sua caixa de entrada, spam, lixo eletrônico e aba promoções.
+            <br />
+            Em alguns casos, o e-mail pode levar alguns minutos para chegar.
+          </div>
+        </div>
+
+        <div class="upsell-head">
+          <h2>
+            Antes de sair, veja estes <mark>produtos extras</mark>
+          </h2>
+
+          <p>
+            Você ainda pode completar sua experiência com materiais complementares.
+          </p>
+        </div>
+
+        <div class="upsell-grid">
+          <!-- FIGURINHAS DE OURO -->
+          <article class="upsell-card featured">
+            <div class="product-img">
+              <img
+                src="soucer/img/figurinhas%20ouro.png"
+                alt="Figurinhas de Ouro"
+              />
+            </div>
+
+            <div class="upsell-content">
+              <span class="offer-label">Especial</span>
+
+              <h3>Figurinhas de Ouro</h3>
+
+              <p>
+                Figurinhas especiais para deixar o álbum mais completo, bonito e colecionável.
+              </p>
+
+              <ul class="upsell-list">
+                <li>Figurinhas raras da coleção</li>
+                <li>Visual premium</li>
+                <li>Perfeito para completar o álbum</li>
+              </ul>
+
+              <a
+                class="btn btn-primary"
+                href="https://pay.cakto.com.br/55d9r3a_943050"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                COMPRAR FIGURINHAS DE OURO
+              </a>
+            </div>
+          </article>
+
+          <!-- DEVOCIONAL -->
+          <article class="upsell-card">
+            <div class="product-img">
+              <img
+                src="soucer/img/album%20da%20biblia.png"
+                alt="Devocional da Seleção da Fé"
+              />
+            </div>
+
+            <div class="upsell-content">
+              <span class="offer-label purple">Devocional</span>
+
+              <h3>Devocional da Seleção da Fé</h3>
+
+              <p>
+                Momentos bíblicos simples para transformar o álbum em reflexão e aprendizado.
+              </p>
+
+              <ul class="upsell-list">
+                <li>Conteúdo cristão para família</li>
+                <li>Leitura fácil e rápida</li>
+                <li>Ideal para crianças e pais</li>
+              </ul>
+
+              <a
+                class="btn btn-primary"
+                href="https://pay.cakto.com.br/pcjwqiq_943123"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                COMPRAR DEVOCIONAL
+              </a>
+            </div>
+          </article>
+
+          <!-- CARTÕES DE VERSÍCULOS -->
+          <article class="upsell-card">
+            <div class="product-img">
+              <img
+                src="soucer/img/versiculos.png"
+                alt="Cartões de Versículos"
+              />
+            </div>
+
+            <div class="upsell-content">
+              <span class="offer-label green">Versículos</span>
+
+              <h3>Cartões de Versículos</h3>
+
+              <p>
+                Cartões para memorizar a Palavra de forma simples, visual e prática.
+              </p>
+
+              <ul class="upsell-list">
+                <li>Pronto para imprimir</li>
+                <li>Ajuda na memorização</li>
+                <li>Ótimo para casa, igreja ou EBD</li>
+              </ul>
+
+              <a
+                class="btn btn-primary"
+                href="https://pay.cakto.com.br/fp3z99k_943132"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                COMPRAR CARTÕES
+              </a>
+            </div>
+          </article>
+
+          <!-- FIGURINHA DA COPA -->
+          <article class="upsell-card">
+            <div class="product-img">
+              <img
+                src="soucer/img/figurinhas%20copa.png"
+                alt="Figurinha personalizada da Copa"
+              />
+            </div>
+
+            <div class="upsell-content">
+              <span class="offer-label blue">Personalizada</span>
+
+              <h3>Crie sua Figurinha da Copa</h3>
+
+              <p>
+                Gere sua própria figurinha personalizada para colocar na parte final do álbum.
+              </p>
+
+              <ul class="upsell-list">
+                <li>Figurinha com sua foto</li>
+                <li>Estilo Copa do Mundo</li>
+                <li>Perfeita para a última figurinha</li>
+              </ul>
+
+              <a
+                class="btn btn-primary"
+                href="https://copafigurinha.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CRIAR MINHA FIGURINHA
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="home-box">
+          <a href="https://albumdafe.top">
+            Voltar para o site principal
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container center">
+      <p>
+        Dúvidas sobre a entrega?
+        <br />
+        Entre em contato:
+        <a href="mailto:entrega@albumdafe.top">entrega@albumdafe.top</a>
+      </p>
+
+      <small>
+        Álbum da Bíblia © 2026 — Todos os direitos reservados
+      </small>
+    </div>
+  </footer>
+
+  <div id="toastArea" class="toast-area"></div>
+
+  <script src="soucer/jv/script.js"></script>
+</body>
+</html>

@@ -13,12 +13,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900;1000&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="soucer/css/style.css" />
+
+  <style>
+    .extras-floating-btn {
+      position: fixed;
+      top: 58px;
+      right: 18px;
+      z-index: 9999;
+      background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 1000;
+      font-size: 14px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(109, 40, 217, 0.35);
+      border: 2px solid rgba(255,255,255,0.7);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .extras-floating-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(109, 40, 217, 0.42);
+    }
+
+    @media (max-width: 620px) {
+      .extras-floating-btn {
+        top: auto;
+        right: 12px;
+        bottom: 82px;
+        font-size: 13px;
+        padding: 12px 16px;
+        box-shadow: 0 10px 24px rgba(109, 40, 217, 0.42);
+      }
+    }
+
+    @media (max-width: 380px) {
+      .extras-floating-btn {
+        right: 10px;
+        bottom: 86px;
+        font-size: 12px;
+        padding: 11px 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="top-alert">
     📖 ÚLTIMOS DIAS — OFERTA DE LANÇAMENTO!
   </div>
+
+  <a class="extras-floating-btn" href="produtos-extras.html">
+    Produtos Extras
+  </a>
 
   <main>
     <!-- HERO -->
@@ -208,7 +257,7 @@
           <div class="carousel-viewport image-frame">
             <div class="carousel-track">
               <figure class="carousel-slide">
-                <img src="soucer/img/ChatGPT-Image-22_05_2026-01_44_16-1024x683.png"Exemplo de páginas do álbum" />
+                <img src="soucer/img/ChatGPT-Image-22_05_2026-01_44_16-1024x683.png" alt="Exemplo de páginas do álbum" />
               </figure>
 
               <figure class="carousel-slide">
@@ -424,7 +473,7 @@
         Ainda restou alguma dúvida?
         <br />
         Entre em contato:
-        <a href="mailto:seuemail@gmail.com">seuemail@gmail.com</a>
+        <a href="mailto:entrega@albumdafe.top">entrega@albumdafe.top</a>
       </p>
 
       <small>
