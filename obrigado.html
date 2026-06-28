@@ -21,28 +21,24 @@
   <link rel="stylesheet" href="soucer/css/style.css" />
 
   <style>
-    /* ===============================
-       OBRIGADO — RESPONSIVO COMPLETO
-    ================================ */
-
     .thanks-page {
-      padding: 28px 0 56px;
+      padding: 32px 0 56px;
     }
 
     .thanks-page .container {
-      width: min(1180px, calc(100% - 28px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
     }
 
     .thanks-box {
       background: #ffffff;
       border-radius: 28px;
-      padding: clamp(22px, 4vw, 38px);
+      padding: 34px 32px;
       box-shadow: 0 18px 44px rgba(46, 28, 112, 0.12);
       border: 2px solid rgba(126, 72, 255, 0.14);
       text-align: center;
       max-width: 920px;
-      margin: 0 auto 30px;
+      margin: 0 auto 34px;
     }
 
     .thanks-box .pill {
@@ -50,9 +46,9 @@
     }
 
     .thanks-box h1 {
-      font-size: clamp(30px, 5vw, 58px);
-      line-height: 1.08;
-      margin: 0 0 18px;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.12;
+      margin: 0 0 16px;
     }
 
     .thanks-box h1 span {
@@ -61,7 +57,7 @@
     }
 
     .thanks-box p {
-      font-size: clamp(16px, 2.4vw, 20px);
+      font-size: 19px;
       line-height: 1.45;
       font-weight: 900;
       color: #34256c;
@@ -73,42 +69,53 @@
       background: #fff3bf;
       border: 2px solid rgba(255, 186, 0, 0.55);
       border-radius: 22px;
-      padding: clamp(16px, 3vw, 22px);
-      margin-top: 22px;
+      padding: 20px 22px;
+      margin: 22px auto 0;
       color: #6b3d00;
       font-weight: 1000;
-      font-size: clamp(15px, 2.2vw, 18px);
+      font-size: 17px;
       line-height: 1.45;
+      max-width: 780px;
     }
 
-    .upsell-head {
+    .extras-head {
       text-align: center;
       max-width: 860px;
-      margin: 0 auto 24px;
+      margin: 0 auto 26px;
     }
 
-    .upsell-head h2 {
-      font-size: clamp(28px, 4.5vw, 48px);
-      line-height: 1.1;
+    .extras-head h2 {
+      font-size: clamp(30px, 3.2vw, 42px);
+      line-height: 1.16;
       margin: 0 0 12px;
+      letter-spacing: -0.4px;
     }
 
-    .upsell-head p {
-      font-size: clamp(15px, 2.2vw, 18px);
+    .extras-head h2 mark {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 10px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .extras-head p {
+      font-size: 18px;
       line-height: 1.45;
       font-weight: 900;
       color: #34256c;
       margin: 0 auto;
+      max-width: 760px;
     }
 
-    .upsell-grid {
+    .extras-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
       align-items: stretch;
     }
 
-    .upsell-card {
+    .extra-card {
       background: #ffffff;
       border-radius: 26px;
       overflow: hidden;
@@ -120,7 +127,7 @@
       min-width: 0;
     }
 
-    .upsell-card.featured {
+    .extra-card.featured {
       border-color: rgba(255, 186, 0, 0.6);
       box-shadow: 0 18px 40px rgba(255, 186, 0, 0.18);
     }
@@ -142,7 +149,7 @@
       display: block;
     }
 
-    .upsell-content {
+    .extra-content {
       padding: 18px;
       display: flex;
       flex-direction: column;
@@ -178,13 +185,13 @@
       color: #1d4ed8;
     }
 
-    .upsell-card h3 {
-      font-size: clamp(20px, 2.2vw, 24px);
+    .extra-card h3 {
+      font-size: 23px;
       line-height: 1.12;
       margin: 0 0 10px;
     }
 
-    .upsell-card p {
+    .extra-card p {
       font-size: 15px;
       line-height: 1.4;
       margin: 0 0 14px;
@@ -192,13 +199,13 @@
       font-weight: 800;
     }
 
-    .upsell-list {
+    .extra-list {
       margin: 0 0 18px;
       padding: 0;
       list-style: none;
     }
 
-    .upsell-list li {
+    .extra-list li {
       font-size: 14px;
       line-height: 1.35;
       font-weight: 900;
@@ -208,7 +215,7 @@
       position: relative;
     }
 
-    .upsell-list li::before {
+    .extra-list li::before {
       content: "";
       width: 8px;
       height: 8px;
@@ -219,7 +226,7 @@
       top: 6px;
     }
 
-    .upsell-card .btn {
+    .extra-card .btn {
       width: 100%;
       text-align: center;
       margin-top: auto;
@@ -242,7 +249,7 @@
     }
 
     @media (max-width: 1100px) {
-      .upsell-grid {
+      .extras-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
       }
@@ -250,90 +257,125 @@
       .product-img {
         height: 240px;
       }
+
+      .extras-head h2 {
+        font-size: 34px;
+      }
     }
 
     @media (max-width: 620px) {
       .top-alert {
-        font-size: 12px;
+        font-size: 10.5px;
         line-height: 1.25;
-        padding: 10px 8px;
-        letter-spacing: 0.4px;
+        padding: 9px 6px;
+        letter-spacing: 0.2px;
       }
 
       .thanks-page {
-        padding: 18px 0 42px;
+        padding: 14px 0 38px;
       }
 
       .thanks-page .container {
-        width: min(100% - 18px, 1180px);
+        width: min(100% - 16px, 1180px);
       }
 
       .thanks-box {
-        border-radius: 22px;
-        padding: 22px 14px;
-        margin-bottom: 26px;
+        border-radius: 20px;
+        padding: 18px 12px;
+        margin-bottom: 24px;
+      }
+
+      .thanks-box .pill {
+        font-size: 12px;
+        padding: 7px 12px;
+        margin-bottom: 12px;
       }
 
       .thanks-box h1 {
-        font-size: 30px;
-        line-height: 1.12;
-        letter-spacing: -0.5px;
+        font-size: 25px;
+        line-height: 1.18;
+        letter-spacing: -0.3px;
+        margin-bottom: 12px;
+      }
+
+      .thanks-box h1 span {
+        font-size: 24px;
+        line-height: 1.18;
+        margin-top: 2px;
       }
 
       .thanks-box p {
-        font-size: 15.5px;
+        font-size: 14px;
+        line-height: 1.45;
+        max-width: 310px;
       }
 
       .delivery-alert {
-        border-radius: 18px;
-        padding: 16px 12px;
-        font-size: 14.5px;
+        border-radius: 16px;
+        padding: 14px 10px;
+        margin-top: 18px;
+        font-size: 13px;
+        line-height: 1.45;
       }
 
-      .upsell-head {
-        margin-bottom: 18px;
+      .extras-head {
+        max-width: 330px;
+        margin: 0 auto 18px;
       }
 
-      .upsell-head h2 {
-        font-size: 28px;
-        line-height: 1.12;
+      .extras-head h2 {
+        font-size: 22px;
+        line-height: 1.22;
+        letter-spacing: -0.2px;
+        margin-bottom: 10px;
       }
 
-      .upsell-head p {
-        font-size: 15px;
+      .extras-head h2 mark {
+        display: inline-block;
+        padding: 2px 7px;
+        border-radius: 8px;
+        line-height: 1.08;
+        margin-top: 2px;
+        white-space: normal;
       }
 
-      .upsell-grid {
+      .extras-head p {
+        font-size: 13.8px;
+        line-height: 1.45;
+        max-width: 310px;
+      }
+
+      .extras-grid {
         grid-template-columns: 1fr;
         gap: 18px;
       }
 
-      .upsell-card {
+      .extra-card {
         border-radius: 22px;
       }
 
       .product-img {
-        height: 230px;
+        height: 220px;
         padding: 10px;
       }
 
-      .upsell-content {
+      .extra-content {
         padding: 16px;
       }
 
-      .upsell-card h3 {
+      .extra-card h3 {
         font-size: 22px;
       }
 
-      .upsell-card p {
+      .extra-card p {
         font-size: 14.5px;
       }
 
-      .upsell-list li {
+      .extra-list li {
         font-size: 13.8px;
       }
 
-      .upsell-card .btn {
+      .extra-card .btn {
         font-size: 13px;
         padding: 14px 10px;
       }
@@ -345,19 +387,40 @@
     }
 
     @media (max-width: 390px) {
-      .thanks-box h1 {
-        font-size: 27px;
+      .top-alert {
+        font-size: 10px;
       }
 
-      .upsell-head h2 {
-        font-size: 25px;
+      .thanks-box h1 {
+        font-size: 23px;
+      }
+
+      .thanks-box h1 span {
+        font-size: 22px;
+      }
+
+      .thanks-box p {
+        font-size: 13.5px;
+      }
+
+      .delivery-alert {
+        font-size: 12.8px;
+        padding: 13px 9px;
+      }
+
+      .extras-head h2 {
+        font-size: 20px;
+      }
+
+      .extras-head p {
+        font-size: 13.3px;
       }
 
       .product-img {
         height: 205px;
       }
 
-      .upsell-card .btn {
+      .extra-card .btn {
         font-size: 12.5px;
       }
     }
@@ -391,7 +454,7 @@
           </div>
         </div>
 
-        <div class="upsell-head">
+        <div class="extras-head">
           <h2>
             Antes de sair, veja estes <mark>produtos extras</mark>
           </h2>
@@ -401,17 +464,13 @@
           </p>
         </div>
 
-        <div class="upsell-grid">
-          <!-- FIGURINHAS DE OURO -->
-          <article class="upsell-card featured">
+        <div class="extras-grid">
+          <article class="extra-card featured">
             <div class="product-img">
-              <img
-                src="soucer/img/figurinhas%20ouro.png"
-                alt="Figurinhas de Ouro"
-              />
+              <img src="soucer/img/figurinhas%20ouro.png" alt="Figurinhas de Ouro" />
             </div>
 
-            <div class="upsell-content">
+            <div class="extra-content">
               <span class="offer-label">Especial</span>
 
               <h3>Figurinhas de Ouro</h3>
@@ -420,33 +479,24 @@
                 Figurinhas especiais para deixar o álbum mais completo, bonito e colecionável.
               </p>
 
-              <ul class="upsell-list">
+              <ul class="extra-list">
                 <li>Figurinhas raras da coleção</li>
                 <li>Visual premium</li>
                 <li>Perfeito para completar o álbum</li>
               </ul>
 
-              <a
-                class="btn btn-primary"
-                href="https://pay.cakto.com.br/55d9r3a_943050"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a class="btn btn-primary" href="https://pay.cakto.com.br/55d9r3a_943050" target="_blank" rel="noopener noreferrer">
                 COMPRAR FIGURINHAS DE OURO
               </a>
             </div>
           </article>
 
-          <!-- DEVOCIONAL -->
-          <article class="upsell-card">
+          <article class="extra-card">
             <div class="product-img">
-              <img
-                src="soucer/img/album%20da%20biblia.png"
-                alt="Devocional da Seleção da Fé"
-              />
+              <img src="soucer/img/album%20da%20biblia.png" alt="Devocional da Seleção da Fé" />
             </div>
 
-            <div class="upsell-content">
+            <div class="extra-content">
               <span class="offer-label purple">Devocional</span>
 
               <h3>Devocional da Seleção da Fé</h3>
@@ -455,33 +505,24 @@
                 Momentos bíblicos simples para transformar o álbum em reflexão e aprendizado.
               </p>
 
-              <ul class="upsell-list">
+              <ul class="extra-list">
                 <li>Conteúdo cristão para família</li>
                 <li>Leitura fácil e rápida</li>
                 <li>Ideal para crianças e pais</li>
               </ul>
 
-              <a
-                class="btn btn-primary"
-                href="https://pay.cakto.com.br/pcjwqiq_943123"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a class="btn btn-primary" href="https://pay.cakto.com.br/pcjwqiq_943123" target="_blank" rel="noopener noreferrer">
                 COMPRAR DEVOCIONAL
               </a>
             </div>
           </article>
 
-          <!-- CARTÕES DE VERSÍCULOS -->
-          <article class="upsell-card">
+          <article class="extra-card">
             <div class="product-img">
-              <img
-                src="soucer/img/versiculos.png"
-                alt="Cartões de Versículos"
-              />
+              <img src="soucer/img/versiculos.png" alt="Cartões de Versículos" />
             </div>
 
-            <div class="upsell-content">
+            <div class="extra-content">
               <span class="offer-label green">Versículos</span>
 
               <h3>Cartões de Versículos</h3>
@@ -490,33 +531,24 @@
                 Cartões para memorizar a Palavra de forma simples, visual e prática.
               </p>
 
-              <ul class="upsell-list">
+              <ul class="extra-list">
                 <li>Pronto para imprimir</li>
                 <li>Ajuda na memorização</li>
                 <li>Ótimo para casa, igreja ou EBD</li>
               </ul>
 
-              <a
-                class="btn btn-primary"
-                href="https://pay.cakto.com.br/fp3z99k_943132"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a class="btn btn-primary" href="https://pay.cakto.com.br/fp3z99k_943132" target="_blank" rel="noopener noreferrer">
                 COMPRAR CARTÕES
               </a>
             </div>
           </article>
 
-          <!-- FIGURINHA DA COPA -->
-          <article class="upsell-card">
+          <article class="extra-card">
             <div class="product-img">
-              <img
-                src="soucer/img/figurinhas%20copa.png"
-                alt="Figurinha personalizada da Copa"
-              />
+              <img src="soucer/img/figurinhas%20copa.png" alt="Figurinha personalizada da Copa" />
             </div>
 
-            <div class="upsell-content">
+            <div class="extra-content">
               <span class="offer-label blue">Personalizada</span>
 
               <h3>Crie sua Figurinha da Copa</h3>
@@ -525,18 +557,13 @@
                 Gere sua própria figurinha personalizada para colocar na parte final do álbum.
               </p>
 
-              <ul class="upsell-list">
+              <ul class="extra-list">
                 <li>Figurinha com sua foto</li>
                 <li>Estilo Copa do Mundo</li>
                 <li>Perfeita para a última figurinha</li>
               </ul>
 
-              <a
-                class="btn btn-primary"
-                href="https://copafigurinha.com.br"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a class="btn btn-primary" href="https://copafigurinha.com.br" target="_blank" rel="noopener noreferrer">
                 CRIAR MINHA FIGURINHA
               </a>
             </div>
