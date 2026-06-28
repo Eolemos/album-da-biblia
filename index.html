@@ -15,6 +15,28 @@
   <link rel="stylesheet" href="soucer/css/style.css" />
 
   <style>
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
+    main {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
     .extras-floating-btn {
       position: fixed;
       top: 58px;
@@ -38,7 +60,242 @@
       box-shadow: 0 14px 30px rgba(109, 40, 217, 0.42);
     }
 
+    .hero {
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      align-items: center;
+    }
+
+    .hero-text {
+      min-width: 0;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -0.8px;
+      max-width: 760px;
+      margin-left: 0;
+      margin-right: 0;
+      text-wrap: balance;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
+    .hero-text h1 span {
+      display: inline;
+      line-height: inherit;
+      white-space: normal;
+    }
+
+    .hero-text .lead {
+      max-width: 660px;
+    }
+
+    .section-light h2,
+    .section-white h2,
+    .final-cta h2,
+    .mission-section h2 {
+      text-wrap: balance;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
+    .clean-highlight {
+      display: inline;
+      color: #7c3aed;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      position: relative;
+    }
+
+    .clean-highlight::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -7px;
+      height: 4px;
+      background: #f5bf2f;
+      border-radius: 999px;
+    }
+
+    #conteudo h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.16;
+      letter-spacing: -0.4px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #conteudo .clean-highlight {
+      white-space: nowrap;
+    }
+
+    .feedback-section {
+      background: #ffffff;
+      padding: 58px 0;
+      overflow: hidden;
+    }
+
+    .feedback-section .container {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .feedback-head {
+      text-align: center;
+      max-width: 1050px;
+      margin: 0 auto 34px;
+    }
+
+    .feedback-head .feedback-seed {
+      display: block;
+      color: #7c3aed;
+      font-weight: 1000;
+      font-size: clamp(18px, 2.2vw, 28px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .feedback-head h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.12;
+      letter-spacing: -0.5px;
+      margin: 0;
+      color: #201547;
+      text-wrap: balance;
+    }
+
+    .feedback-marquee {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 10px 0 20px;
+    }
+
+    .feedback-marquee::before,
+    .feedback-marquee::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 90px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .feedback-marquee::before {
+      left: 0;
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .feedback-marquee::after {
+      right: 0;
+      background: linear-gradient(270deg, #ffffff 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .feedback-track {
+      display: flex;
+      gap: 22px;
+      width: max-content;
+      animation: feedbackInfinite 46s linear infinite;
+      will-change: transform;
+    }
+
+    .feedback-marquee:hover .feedback-track {
+      animation-play-state: paused;
+    }
+
+    .feedback-card {
+      flex: 0 0 360px;
+      background: #f7f4ff;
+      border-radius: 26px;
+      padding: 12px;
+      border: 2px solid rgba(124, 58, 237, 0.12);
+      box-shadow: 0 14px 32px rgba(46, 28, 112, 0.10);
+    }
+
+    .feedback-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: block;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .feedback-mobile-note {
+      display: none;
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #7c3aed;
+    }
+
+    .static-preview-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .static-preview {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .static-preview img {
+      width: 100%;
+      display: block;
+    }
+
+    @keyframes feedbackInfinite {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text h1,
+      .hero-text .lead,
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-image {
+        margin-top: 22px;
+      }
+
+      .feedback-card {
+        flex-basis: 320px;
+      }
+    }
+
     @media (max-width: 620px) {
+      .top-alert {
+        font-size: 11px;
+        line-height: 1.25;
+        padding: 9px 6px;
+        letter-spacing: 0.2px;
+      }
+
       .extras-floating-btn {
         top: auto;
         right: 12px;
@@ -46,6 +303,129 @@
         font-size: 13px;
         padding: 12px 16px;
         box-shadow: 0 10px 24px rgba(109, 40, 217, 0.42);
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .hero-text {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .hero-text h1 {
+        font-size: 30px;
+        line-height: 1.16;
+        letter-spacing: -0.3px;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-text h1 span {
+        display: inline;
+      }
+
+      .hero-text .lead {
+        font-size: 17px;
+        line-height: 1.45;
+        max-width: 330px;
+      }
+
+      .hero-text p {
+        font-size: 15.5px;
+        line-height: 1.55;
+        max-width: 330px;
+      }
+
+      .pill {
+        font-size: 13px;
+        padding: 9px 15px;
+      }
+
+      #conteudo h2 {
+        font-size: 27px;
+        line-height: 1.22;
+        letter-spacing: -0.2px;
+        max-width: 330px;
+      }
+
+      #conteudo .clean-highlight {
+        display: inline;
+        white-space: normal;
+      }
+
+      .clean-highlight::after {
+        bottom: -4px;
+        height: 3px;
+      }
+
+      .section-light,
+      .section-white {
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: calc(100% - 24px);
+      }
+
+      .feedback-section {
+        padding: 42px 0;
+      }
+
+      .feedback-section .container {
+        width: min(100% - 18px, 1180px);
+      }
+
+      .feedback-head {
+        margin-bottom: 22px;
+      }
+
+      .feedback-head .feedback-seed {
+        font-size: 17px;
+        line-height: 1.35;
+        margin-bottom: 16px;
+      }
+
+      .feedback-head h2 {
+        font-size: 25px;
+        line-height: 1.18;
+        letter-spacing: -0.3px;
+      }
+
+      .feedback-marquee {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        padding: 6px 0 18px;
+      }
+
+      .feedback-marquee::before,
+      .feedback-marquee::after {
+        width: 42px;
+      }
+
+      .feedback-track {
+        gap: 14px;
+        animation-duration: 36s;
+      }
+
+      .feedback-card {
+        flex: 0 0 82vw;
+        border-radius: 22px;
+        padding: 9px;
+      }
+
+      .feedback-card img {
+        border-radius: 17px;
+      }
+
+      .feedback-mobile-note {
+        display: block;
+      }
+
+      .static-preview {
+        max-width: 100%;
       }
     }
 
@@ -55,6 +435,34 @@
         bottom: 86px;
         font-size: 12px;
         padding: 11px 14px;
+      }
+
+      .hero-text h1 {
+        font-size: 27px;
+        max-width: 310px;
+      }
+
+      .hero-text .lead {
+        font-size: 16px;
+        max-width: 305px;
+      }
+
+      .hero-text p {
+        font-size: 14.5px;
+        max-width: 305px;
+      }
+
+      #conteudo h2 {
+        font-size: 24px;
+        max-width: 305px;
+      }
+
+      .feedback-head h2 {
+        font-size: 23px;
+      }
+
+      .feedback-card {
+        flex-basis: 86vw;
       }
     }
   </style>
@@ -89,16 +497,6 @@
             Inspirado no encanto dos álbuns de figurinhas, nasceu uma coleção bíblica feita para despertar curiosidade,
             memória e amor pela Palavra.
           </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary js-checkout" href="#preco">
-              QUERO COMEÇAR MINHA COLEÇÃO
-            </a>
-
-            <a class="btn btn-secondary" href="#conteudo">
-              VER O QUE RECEBO
-            </a>
-          </div>
         </div>
 
         <div class="hero-image image-frame">
@@ -146,10 +544,99 @@
       </div>
     </section>
 
+    <!-- FEEDBACKS -->
+    <section class="feedback-section">
+      <div class="container">
+        <div class="feedback-head">
+          <span class="feedback-seed">
+            📜 Cada figurinha colada se torna uma semente da Palavra plantada no coração.
+          </span>
+
+          <h2>
+            Já recebemos + de 1.500 feedbacks de famílias impactadas pela nossa didática!
+          </h2>
+        </div>
+
+        <div class="feedback-marquee">
+          <div class="feedback-track">
+            <article class="feedback-card">
+              <img src="soucer/img/1EED60A6-184C-4D1B-80A0-7A8D12F0E7D2-768x768.jpeg" alt="Feedback de família usando material bíblico" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/33E9D76E-43A7-4B4E-8917-7142B698A4F3-768x768.jpeg" alt="Feedback de criança com material cristão" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/046DBD25-B8AE-48AF-BB16-5CFE5F7E260A-768x768.jpeg" alt="Feedback sobre material bíblico infantil" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/951E550A-E10A-4134-8841-A74994F7A0CA-768x768.jpeg" alt="Crianças estudando com material bíblico" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/B8C05253-18F2-4E01-8B84-D0AC21E1F49B-1-768x768.jpeg" alt="Feedback de atividade bíblica infantil" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/BD8A40C2-B231-4C67-9C1C-386C198BA34C-768x768.jpeg" alt="Material bíblico impresso em uso" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/C828C093-9F43-4B2A-9D28-7F8C2FA240C9-768x768.jpeg" alt="Mensagem de feedback de cliente" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/D646AAEE-5108-44FD-8717-DACD26AC72B1-768x768.jpeg" alt="Feedback de criança usando material cristão" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/1EED60A6-184C-4D1B-80A0-7A8D12F0E7D2-768x768.jpeg" alt="Feedback de família usando material bíblico" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/33E9D76E-43A7-4B4E-8917-7142B698A4F3-768x768.jpeg" alt="Feedback de criança com material cristão" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/046DBD25-B8AE-48AF-BB16-5CFE5F7E260A-768x768.jpeg" alt="Feedback sobre material bíblico infantil" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/951E550A-E10A-4134-8841-A74994F7A0CA-768x768.jpeg" alt="Crianças estudando com material bíblico" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/B8C05253-18F2-4E01-8B84-D0AC21E1F49B-1-768x768.jpeg" alt="Feedback de atividade bíblica infantil" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/BD8A40C2-B231-4C67-9C1C-386C198BA34C-768x768.jpeg" alt="Material bíblico impresso em uso" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/C828C093-9F43-4B2A-9D28-7F8C2FA240C9-768x768.jpeg" alt="Mensagem de feedback de cliente" />
+            </article>
+
+            <article class="feedback-card">
+              <img src="soucer/img/D646AAEE-5108-44FD-8717-DACD26AC72B1-768x768.jpeg" alt="Feedback de criança usando material cristão" />
+            </article>
+          </div>
+        </div>
+
+        <p class="feedback-mobile-note">
+          Os feedbacks passam automaticamente →
+        </p>
+      </div>
+    </section>
+
     <!-- O QUE É -->
     <section class="section-light" id="conteudo">
       <div class="container center narrow">
-        <h2>📖 O que é o <mark>Álbum da Bíblia?</mark></h2>
+        <h2>
+          📖 O que é o <span class="clean-highlight">Álbum da Bíblia?</span>
+        </h2>
 
         <p class="lead">
           Um material digital para imprimir, montar e colecionar, criado para transformar o ensino bíblico em experiência.
@@ -251,28 +738,13 @@
       </div>
 
       <div class="container">
-        <div class="carousel" data-carousel>
-          <button class="carousel-btn prev" type="button" aria-label="Imagem anterior">‹</button>
-
-          <div class="carousel-viewport image-frame">
-            <div class="carousel-track">
-              <figure class="carousel-slide">
-                <img src="soucer/img/ChatGPT-Image-22_05_2026-01_44_16-1024x683.png" alt="Exemplo de páginas do álbum" />
-              </figure>
-
-              <figure class="carousel-slide">
-                <img src="soucer/img/MOCKUPS-1-1024x724.png" alt="Mockup do álbum bíblico" />
-              </figure>
-
-              <figure class="carousel-slide">
-                <img src="soucer/img/MOCKUPS-1-768x543.png" alt="Álbum da Bíblia em mockup" />
-              </figure>
-            </div>
+        <div class="static-preview-wrap">
+          <div class="image-frame static-preview">
+            <img
+              src="soucer/img/ChatGPT-Image-22_05_2026-01_44_16-1024x683.png"
+              alt="Exemplo de páginas do álbum"
+            />
           </div>
-
-          <button class="carousel-btn next" type="button" aria-label="Próxima imagem">›</button>
-
-          <div class="carousel-dots"></div>
         </div>
       </div>
     </section>
