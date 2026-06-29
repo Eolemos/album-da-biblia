@@ -20,6 +20,7 @@
       width: 100%;
       max-width: 100%;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -35,6 +36,12 @@
     img {
       max-width: 100%;
       height: auto;
+    }
+
+    #conteudo,
+    #recebe,
+    #preco {
+      scroll-margin-top: 90px;
     }
 
     .extras-floating-btn {
@@ -92,6 +99,38 @@
 
     .hero-text .lead {
       max-width: 660px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-actions .btn {
+      min-width: 240px;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(109, 40, 217, 0.25);
+    }
+
+    .middle-scroll-actions {
+      display: flex;
+      justify-content: center;
+      margin: 34px auto 0;
+    }
+
+    .middle-scroll-actions .btn {
+      min-width: 260px;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(109, 40, 217, 0.22);
     }
 
     .section-light h2,
@@ -279,6 +318,10 @@
         margin-right: auto;
       }
 
+      .hero-actions {
+        justify-content: center;
+      }
+
       .hero-image {
         margin-top: 22px;
       }
@@ -337,6 +380,32 @@
         font-size: 15.5px;
         line-height: 1.55;
         max-width: 330px;
+      }
+
+      .hero-actions {
+        width: 100%;
+        max-width: 330px;
+        margin: 24px auto 0;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        min-width: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .middle-scroll-actions {
+        width: 100%;
+        max-width: 330px;
+        margin-top: 28px;
+      }
+
+      .middle-scroll-actions .btn {
+        width: 100%;
+        min-width: 0;
       }
 
       .pill {
@@ -452,6 +521,10 @@
         max-width: 305px;
       }
 
+      .hero-actions {
+        max-width: 305px;
+      }
+
       #conteudo h2 {
         font-size: 24px;
         max-width: 305px;
@@ -497,6 +570,12 @@
             Inspirado no encanto dos álbuns de figurinhas, nasceu uma coleção bíblica feita para despertar curiosidade,
             memória e amor pela Palavra.
           </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#conteudo">
+              VER COMO FUNCIONA
+            </a>
+          </div>
         </div>
 
         <div class="hero-image image-frame">
@@ -745,6 +824,12 @@
               alt="Exemplo de páginas do álbum"
             />
           </div>
+        </div>
+
+        <div class="middle-scroll-actions">
+          <a class="btn btn-primary" href="#preco">
+            VER OFERTA AGORA
+          </a>
         </div>
       </div>
     </section>
